@@ -89,10 +89,9 @@ int main(){
   //Strlen Test:
   char str[] = "hello";
   int n = fakestrlen(str);
-  printf("strlen of Imagine = %d\n",strlen(str));
-  printf("My strlen of Imagine = %d\n",n);
-  printf("My strlen of Imagine = %d\n",fakestrlen(str));
-
+  printf("Length of Imagine = %d\n",strlen(str));
+  printf("My Length of Imagine = %d\n",n);
+  
   char i = 'i';
 
   // Strchr Test:
@@ -108,26 +107,27 @@ int main(){
   char d[15] = " that";
   // Built in function  
   char *ans3 = strcat(c,d);
-  printf("Built in strcat = %s\n",c);
+  printf("strcat(\"Imagine\",\"that\") = %s\n",c);
   strcpy(c,"Imagine"); 
   // My function
   char *ans4 = fakestrcat(d,c);
-  printf("My strcat = %s\n\n",c);
+  printf("My strcat(\"Imagine\",\"that\") = %s\n\n",c);
   
   // Strcpy and Strncpy Test:
   // Built in function
-  char *ans5 = strncpy(c,"Imagine",3);
-  printf("Built in strncpy = %s\n",c);
+  char *ans5 = strncpy(str,c,3);
+  printf("Copy the first three bytes of Imagine = %s\n",c);
   strcpy(c,"hello");
   // My function
   char *ans6 = fakestrncpy(c,"Imagine",3);
-  printf("My strncpy = %s\n\n",c);
+  printf("My strncpy  = %s\n\n",c);
   strcpy(c,"hello");
-  
+  printf("Before strcpy = %s\n",c);
   printf("Built in strcpy = %s\n",strcpy(c,"woah"));
   strcpy(c,"hello");
+  printf("Before My Strcpy = %s\n",c);
   char *point = fakestrcpy(c,"woah");
-  printf("My strcpy = %s\n\n",point);
+  printf("After My Strcpy = %s\n\n",point);
 
   // Strcmp Test:
   char *Stringa = "imagine";
